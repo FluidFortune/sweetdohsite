@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sweet D'oh Bakery | Custom Cakes &amp; Desserts in Murrieta, CA</title>
+<meta name="description" content="Custom cakes, cupcakes, cake pops, cookies and dessert tables baked from scratch in Murrieta, California since 2008. Vegan, gluten-free and nut-free options. Delivery across LA, OC and the Inland Empire.">
+<meta property="og:title" content="Sweet D'oh Bakery">
+<meta property="og:description" content="Classic desserts with a modern twist. Custom cakes and dessert tables for Southern California celebrations since 2008.">
+<meta property="og:image" content="img/hero-peony-cake.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23232324'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%2352AE8C'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* Layout: charcoal header/footer frame a warm paper page; one teal accent, Playfair headlines, Montserrat body. */
+:root{
+  --paper:#FBFAF7; --paper-2:#F2F0EA; --ink:#232324; --ink-2:#42514C; --mute:#6F7D7A;
+  --line:#E2DFD6; --teal:#52AE8C; --teal-deep:#3B8A6D; --teal-ink:#FFFFFF;
+  --frame:#232324; --frame-fg:#F5F3EE; --frame-mute:#A3A3A3;
+  --card:#FFFFFF; --shadow:0 10px 30px rgba(35,35,36,.10);
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Montserrat","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#1C1C1D; --paper-2:#242426; --ink:#F1EFE9; --ink-2:#D5DBD8; --mute:#9AA7A3;
+  --line:#34353A; --teal:#5EBD9A; --teal-deep:#79CDAE; --teal-ink:#102219;
+  --frame:#141415; --frame-fg:#F5F3EE; --frame-mute:#9A9A9A;
+  --card:#242426; --shadow:0 10px 30px rgba(0,0,0,.45); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#1C1C1D; --paper-2:#242426; --ink:#F1EFE9; --ink-2:#D5DBD8; --mute:#9AA7A3;
+  --line:#34353A; --teal:#5EBD9A; --teal-deep:#79CDAE; --teal-ink:#102219;
+  --frame:#141415; --frame-fg:#F5F3EE; --frame-mute:#9A9A9A;
+  --card:#242426; --shadow:0 10px 30px rgba(0,0,0,.45); color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--frame)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;margin:0;text-wrap:balance;color:var(--ink)}
+p{margin:0}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font:600 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep)}
+.section{padding-block:clamp(56px,8vw,104px)}
+.section-head{display:grid;gap:14px;max-width:640px;margin-bottom:clamp(28px,4vw,48px)}
+.section-head h2{font-size:clamp(30px,4vw,44px)}
+.section-head p{color:var(--mute);font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font:600 13px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,color .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.btn-primary{background:var(--teal);color:var(--teal-ink)}
+.btn-primary:hover{background:var(--teal-deep)}
+.btn-ghost{border-color:currentColor;color:var(--frame-fg);background:transparent}
+.btn-ink{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ink:hover{background:var(--ink);color:var(--paper)}
+
+/* Header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--frame);color:var(--frame-fg);border-bottom:1px solid rgba(255,255,255,.06)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{font-family:var(--display);font-size:22px;letter-spacing:.02em;text-decoration:none;color:var(--frame-fg);white-space:nowrap}
+.brand em{font-style:italic;color:var(--teal)}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--frame-mute);transition:color .15s}
+.nav a:hover{color:var(--frame-fg)}
+.nav .btn{padding:11px 18px;font-size:11px}
+.nav a.btn-primary{color:var(--teal-ink)}
+.nav a.btn-primary:hover{color:var(--teal-ink)}
+[hidden]{display:none!important}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.25);color:var(--frame-fg);border-radius:8px;padding:8px 10px;font:600 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+@media (max-width:820px){
+  .nav-toggle{display:inline-block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--frame);flex-direction:column;align-items:stretch;gap:0;padding:8px 0 16px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav.open{display:flex}
+  .nav a{padding:14px max(16px,env(safe-area-inset-left,0px));font-size:12px}
+  .nav .btn{margin:10px max(16px,env(safe-area-inset-left,0px)) 0;align-self:flex-start}
+}
+
+/* Hero */
+.hero{position:relative;background:var(--frame);color:var(--frame-fg);overflow:hidden;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,20,21,.86) 0%,rgba(20,20,21,.62) 48%,rgba(20,20,21,.18) 100%)}
+.hero .wrap{padding-block:clamp(72px,11vw,150px);display:grid;gap:26px;max-width:1140px}
+.hero h1{font-size:clamp(40px,6.2vw,78px);color:#fff;max-width:14ch;font-weight:400}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero p{max-width:52ch;font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.86)}
+.hero .eyebrow{color:var(--teal)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+@media (max-width:720px){
+  .hero img{position:static;height:min(86vw,420px);object-position:53% 62%}
+  .hero::after{z-index:0;inset:auto 0 0 0;height:calc(100% - min(86vw,420px) + 110px);background:linear-gradient(180deg,rgba(20,20,21,0) 0%,rgba(20,20,21,.78) 70px,rgba(20,20,21,1) 110px)}
+  .hero .wrap{position:relative;z-index:1;margin-top:-64px;padding-top:0;padding-bottom:44px;gap:18px}
+  .hero h1{font-size:clamp(36px,10.5vw,48px)}
+  .hero p{font-size:15.5px}
+}
+
+/* Trust strip */
+.strip{background:var(--paper-2);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-block:22px}
+.strip div{display:grid;gap:3px;font-size:14px;color:var(--ink-2)}
+.strip b{font:600 11px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep)}
+@media (max-width:820px){.strip .wrap{grid-template-columns:repeat(2,1fr)}}
+
+/* Category cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;border-radius:14px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);text-decoration:none;color:inherit;display:grid;transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.card .ph{aspect-ratio:4/3;max-width:100%;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .body{padding:18px 20px 20px;display:grid;gap:6px}
+.card h3{font-size:22px}
+.card p{color:var(--mute);font-size:14px}
+.price{display:inline-flex;align-items:baseline;gap:6px;margin-top:8px;font:600 12px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.price span{font:600 15px/1 var(--body);letter-spacing:0;text-transform:none;color:var(--teal-deep);border-bottom:1.5px dashed var(--teal);padding-bottom:2px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr 1fr;gap:12px}
+  .card{border-radius:10px}
+  .card .ph{aspect-ratio:1}
+  .card .body{padding:12px 12px 14px;gap:4px}
+  .card h3{font-size:17px}
+  .card p{font-size:12.5px;line-height:1.45}
+  .price{font-size:10px;margin-top:6px}
+  .price span{font-size:13px}
+}
+
+/* Menu */
+.menu-bg{background:var(--paper-2);border-block:1px solid var(--line)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 36px}
+.menu-col{display:grid;gap:28px;align-content:start;min-width:0}
+.menu-group h3{font-size:21px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.menu-group ul{list-style:none;margin:0;padding:0;columns:1;font-size:15px;color:var(--ink-2)}
+.menu-group li{padding:4px 0;break-inside:avoid}
+.menu-group li small{color:var(--mute);font-size:12px}
+.menu-group.two ul{columns:2;column-gap:20px}
+.diet{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.diet span{font:600 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border-radius:999px;border:1px solid var(--teal);color:var(--teal-deep)}
+@media (max-width:900px){.menu-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.menu-grid{grid-template-columns:1fr;gap:28px}.menu-col{gap:24px}.menu-group ul{columns:2;column-gap:16px;font-size:14px}.menu-group li{padding:3px 0}}
+
+/* Packages */
+.packages{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.pkg{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px;display:grid;gap:10px;align-content:start;min-width:0}
+.pkg.featured{border-color:var(--teal);box-shadow:var(--shadow)}
+.pkg .eyebrow{color:var(--mute)}
+.pkg h3{font-size:24px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pkg h3 strong{font:600 22px/1 var(--body);color:var(--teal-deep);font-variant-numeric:tabular-nums}
+.pkg ul{margin:4px 0 0;padding:0 0 0 18px;font-size:14px;color:var(--ink-2);display:grid;gap:4px}
+.pkg .serves{font-size:13px;color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:18px;max-width:70ch}
+@media (max-width:900px){.packages{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.packages{grid-template-columns:1fr}}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.gallery figure{margin:0;position:relative;border-radius:10px;overflow:hidden;background:var(--paper-2)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.gallery .tall{grid-row:span 2}
+.gallery .wide{grid-column:span 2}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(3,1fr);grid-auto-rows:180px}}
+@media (max-width:560px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gallery .wide{grid-column:span 2}}
+
+/* About */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.about-text{display:grid;gap:22px;min-width:0}
+.about-text h2{font-size:clamp(30px,4vw,44px)}
+.about-text h3{font-size:22px;margin-top:6px}
+.about-text p{color:var(--ink-2);font-size:16px;max-width:60ch}
+.about-photo{position:relative}
+.about-photo img{border-radius:14px;aspect-ratio:1;object-fit:cover;max-width:100%;box-shadow:var(--shadow)}
+.about-photo .since{position:absolute;left:-14px;bottom:28px;background:var(--teal);color:var(--teal-ink);border-radius:12px;padding:16px 18px;display:grid;gap:2px;box-shadow:var(--shadow)}
+.about-photo .since b{font-family:var(--display);font-size:34px;line-height:1;font-weight:500}
+.about-photo .since span{font:600 10px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase}
+@media (max-width:820px){.about{grid-template-columns:1fr}.about-photo{order:-1;max-width:520px}.about-photo .since{left:12px}}
+
+/* FAQ */
+.faq-bg{background:var(--paper-2);border-block:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,5vw,64px)}
+.steps{display:grid;gap:18px;counter-reset:step}
+.step{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.step i{counter-increment:step;font:500 18px/1 var(--display);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--teal);color:var(--teal-deep);display:grid;place-items:center;font-style:normal}
+.step i::before{content:counter(step)}
+.step h3{font-size:18px;margin-bottom:4px}
+.step p{font-size:15px;color:var(--ink-2)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:16px 0;font:500 17px/1.3 var(--display);display:flex;justify-content:space-between;gap:16px;align-items:center;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:300 26px/1 var(--body);color:var(--teal-deep);flex:none;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 18px;font-size:15px;color:var(--ink-2);max-width:62ch}
+.fill{border-bottom:1.5px dashed var(--teal);color:var(--teal-deep);font-weight:600}
+@media (max-width:820px){.faq-grid{grid-template-columns:1fr}}
+
+/* Quote */
+.quote{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(28px,5vw,64px);align-items:start}
+.quote-side{display:grid;gap:22px;position:sticky;top:96px}
+.quote-side h2{font-size:clamp(30px,4vw,44px)}
+.quote-side p{color:var(--ink-2)}
+.contact-line{display:grid;gap:4px}
+.contact-line b{font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.contact-line span{font-family:var(--display);font-size:24px;user-select:all}
+form{display:grid;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:clamp(20px,3vw,32px);box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:7px;min-width:0}
+label{font:600 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+input,select,textarea{width:100%;font:400 15px/1.4 var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--teal)}
+.checks{display:flex;flex-wrap:wrap;gap:10px}
+.checks label{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-weight:600;letter-spacing:.06em;color:var(--ink-2);text-transform:none;font-size:13px}
+.checks input{width:auto;margin:0;accent-color:var(--teal)}
+.checks label:has(input:checked){border-color:var(--teal);color:var(--teal-deep)}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.form-foot small{color:var(--mute);font-size:12.5px;max-width:40ch}
+.result{display:grid;gap:12px;background:var(--paper-2);border:1px solid var(--teal);border-radius:12px;padding:18px}
+.result h3{font-size:20px}
+.result pre{white-space:pre-wrap;font:400 14px/1.6 var(--body);color:var(--ink-2);margin:0;user-select:all}
+.result .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.result .actions small{color:var(--mute)}
+@media (max-width:820px){.quote{grid-template-columns:1fr}.quote-side{position:static}}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+
+/* Footer */
+.site-footer{background:var(--frame);color:var(--frame-fg)}
+.site-footer .wrap{padding-block:48px 36px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.site-footer .brand{font-size:26px}
+.site-footer p{color:var(--frame-mute);font-size:14px;max-width:38ch;margin-top:10px}
+.site-footer h4{margin:0 0 12px;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--frame-mute)}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px}
+.site-footer a{text-decoration:none;color:var(--frame-fg)}
+.site-footer a:hover{color:var(--teal)}
+.copy{border-top:1px solid rgba(255,255,255,.08)}
+.copy .wrap{padding-block:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--frame-mute)}
+@media (max-width:820px){.site-footer .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.site-footer .wrap{grid-template-columns:1fr}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} img{max-width:100%} [hidden]{display:none!important}</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Sweet <em>D'oh</em> Bakery</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Site">
+      <a href="#make">What we make</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#faq">Ordering &amp; FAQ</a>
+      <a class="btn btn-primary" href="#quote">Request a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="img/hero-peony-cake.jpg" alt="A semi-naked buttercream cake topped with a blush rose, on a wooden stand at a wedding reception" width="1000" height="666" fetchpriority="high">
+    <div class="wrap">
+      <span class="eyebrow">Murrieta, California &middot; Since 2008</span>
+      <h1>Classic desserts with a <em>modern twist</em></h1>
+      <p>Custom cakes, cupcakes, cake pops, cookies and full dessert tables, baked from scratch with natural ingredients and designed to fit your celebration. Delivery and pick-up across LA, Orange County and the Inland Empire.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#quote">Request a quote</a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div><b>Baking since</b>2008 &middot; 18 years of celebrations</div>
+      <div><b>Trained at</b>Le Cordon Bleu, Culinary Arts</div>
+      <div><b>Dietary options</b>Vegan, gluten-free, dairy-free, nut-free</div>
+      <div><b>We deliver to</b>LA, OC, Inland Empire &amp; nearby</div>
+    </div>
+  </div>
+
+  <section class="section" id="make">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we make</span>
+        <h2>Every piece made to order, for your event</h2>
+        <p>Pick a category to see examples. Everything can be matched to your colors, theme and dietary needs.</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="#gallery">
+          <div class="ph"><img src="img/cake-naked-berries.jpg" alt="Semi-naked layer cake topped with fresh berries" loading="lazy"></div>
+          <div class="body"><h3>Cakes</h3><p>Single-tier custom cakes in classic and specialty flavors, 6-inch and up.</p><div class="price">Starting at <span>$&thinsp;__</span></div></div>
+        </a>
+        <a class="card" href="#gallery">
+          <div class="ph"><img src="img/tiered-green-floral.jpg" alt="Two-tier sage green cake with fresh flowers" loading="lazy"></div>
+          <div class="body"><h3>Tiered Cakes</h3><p>Wedding and celebration cakes, two tiers and beyond, with fresh florals or sugar work.</p><div class="price">Starting at <span>$&thinsp;__</span></div></div>
+        </a>
+        <a class="card" href="#gallery">
+          <div class="ph"><img src="img/banner-wedding-cupcakes.jpg" alt="Wedding cupcakes with gold toppers on a rustic display" loading="lazy"></div>
+          <div class="body"><h3>Cupcakes</h3><p>By the dozen, in any flavor on the menu, with toppers and wrappers to match.</p><div class="price">Per dozen from <span>$&thinsp;__</span></div></div>
+        </a>
+        <a class="card" href="#gallery">
+          <div class="ph"><img src="img/cakepops-1.jpg" alt="White chocolate cake pops with rainbow sprinkles" loading="lazy"></div>
+          <div class="body"><h3>Cake Pops</h3><p>Dipped and decorated by hand, perfect for favors and dessert tables.</p><div class="price">Per dozen from <span>$&thinsp;__</span></div></div>
+        </a>
+        <a class="card" href="#gallery">
+          <div class="ph"><img src="img/cookies-3.jpg" alt="Decorated sugar cookies shaped like beehives and bees" loading="lazy"></div>
+          <div class="body"><h3>Sugar Cookies</h3><p>Hand-iced in custom shapes and colors, individually wrapped on request.</p><div class="price">Per dozen from <span>$&thinsp;__</span></div></div>
+        </a>
+        <a class="card" href="#gallery">
+          <div class="ph"><img src="img/table-2.jpg" alt="Styled dessert table with cake, shooters and treats" loading="lazy"></div>
+          <div class="body"><h3>Dessert Tables</h3><p>A styled spread of cake, shooters, treats and cookies, delivered and set up.</p><div class="price">Packages from <span>$140</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu-bg" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Menu</span>
+        <h2>Flavors, treats and packages</h2>
+        <p>Most of the menu can be made vegan, gluten-free, dairy-free, nut-free or a combination. If your favorite flavor isn't listed, ask; we can usually make it.</p>
+        <div class="diet"><span>Vegan</span><span>Gluten-free</span><span>Dairy-free</span><span>Nut-free</span><span>Lower sugar</span></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-col">
+          <div class="menu-group">
+            <h3>Classic flavors</h3>
+            <ul>
+              <li>Vanilla</li><li>Chocolate</li><li>Marble <small>cakes &amp; cupcakes only</small></li><li>Confetti</li><li>Red Velvet</li><li>Lemon</li><li>Strawberry</li><li>German Chocolate</li>
+            </ul>
+          </div>
+          <div class="menu-group">
+            <h3>Chocolate-covered treats</h3>
+            <ul><li>Strawberries</li><li>Pretzel rods</li><li>Marshmallows</li><li>Oreos</li><li>Madeleines</li></ul>
+          </div>
+        </div>
+        <div class="menu-col">
+          <div class="menu-group">
+            <h3>Specialty flavors</h3>
+            <ul>
+              <li>Banana Chocolate Chip</li><li>Horchata</li><li>Strawberry Basil</li><li>Hummingbird</li><li>Oatmeal Cookie</li><li>Chocolate Chip Cookie D'oh</li><li>Biscoff</li><li>Peaches and Cream</li><li>Cookies and Cream</li><li>Chocolate Peanut Butter</li><li>Blueberry Lemon</li><li>Butterscotch</li><li>Chocolate-Covered Strawberry</li><li>Carrot Raisin <small>no nuts</small></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-col">
+          <div class="menu-group">
+            <h3>Dessert shooters</h3>
+            <ul>
+              <li>Chocolate Mousse</li><li>Cheesecake Mousse</li><li>Strawberry Cheesecake Mousse</li><li>Tiramisu</li><li>Biscoff Tiramisu</li><li>Tres Leches</li><li>Raspberry Panna Cotta</li><li>Arroz con Leche</li><li>Strawberry Shortcake</li><li>Chocolate Raspberry</li>
+            </ul>
+          </div>
+          <div class="menu-group two">
+            <h3>Desserts &amp; treats</h3>
+            <ul>
+              <li>Decorated Sugar Cookies</li><li>French Macarons</li><li>Coconut Macaroons</li><li>Cream Puffs</li><li>Brown Butter Rice Treats</li><li>S'more Rice Treats</li><li>Lemon Bars</li><li>Brownies</li><li>Blondies</li><li>Pies</li><li>Fruit Tarts</li><li>Cheesecake Bites</li><li>Chocolate Chip Cookies</li><li>Oatmeal Raisin Cookies</li><li>Butterscotch Oatmeal</li><li>Brown Butter Sugar</li><li>Strawberry White Chip</li><li>Kitchen Sink Cookies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="packages">
+        <div class="pkg">
+          <span class="eyebrow">Treats package</span>
+          <h3>Chocolate-covered <strong>$85</strong></h3>
+          <p class="serves">1 dozen of each &middot; 2 dozen of each $160</p>
+          <ul><li>Cake pops</li><li>Pretzel rods</li><li>Rice treats</li><li>Oreos</li><li>Marshmallow pops</li></ul>
+        </div>
+        <div class="pkg">
+          <span class="eyebrow">Sweet package</span>
+          <h3>Small <strong>$140</strong></h3>
+          <p class="serves">6-inch cake, serves 12</p>
+          <ul><li>1 dozen cupcakes</li><li>1 dozen cake pops</li><li>1 dozen pretzel rods</li><li>1 dozen sugar cookies</li><li>1 dozen dessert shooters</li></ul>
+        </div>
+        <div class="pkg featured">
+          <span class="eyebrow">Most popular</span>
+          <h3>Medium <strong>$210</strong></h3>
+          <p class="serves">8-inch cake, serves 20</p>
+          <ul><li>1 dozen cupcakes</li><li>1 dozen cake pops</li><li>1 dozen pretzel rods</li><li>1 dozen sugar cookies</li><li>2 dozen dessert shooters</li><li>2 dozen fruit tarts</li></ul>
+        </div>
+        <div class="pkg">
+          <span class="eyebrow">Sweet package</span>
+          <h3>Large <strong>$370</strong></h3>
+          <p class="serves">2-tier cake, serves 32</p>
+          <ul><li>2 dozen cupcakes</li><li>2 dozen cake pops</li><li>2 dozen pretzel rods</li><li>2 dozen rice treats</li><li>2 dozen sugar cookies</li><li>2 dozen dessert shooters</li><li>2 dozen fruit tarts</li></ul>
+        </div>
+      </div>
+      <p class="note">Package prices are our 2024 rates and some restrictions apply; we'll confirm current pricing with your quote. Custom orders are priced by size, design and flavor.</p>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2>A few recent celebrations</h2>
+        <p>Follow along on Instagram for the latest work.</p>
+      </div>
+      <div class="gallery">
+        <figure class="tall"><img src="img/tiered-green-floral.jpg" alt="Sage green two-tier cake with fresh flowers" loading="lazy"><figcaption>Tiered cake</figcaption></figure>
+        <figure><img src="img/cake-teal-ruffle.jpg" alt="Teal ruffled buttercream cake" loading="lazy"><figcaption>Cake</figcaption></figure>
+        <figure><img src="img/cupcakes-2.jpg" alt="Cupcakes with piped frosting on a dessert table" loading="lazy"><figcaption>Cupcakes</figcaption></figure>
+        <figure class="wide"><img src="img/banner-cranberry-tower.jpg" alt="Tower of cupcakes topped with sugared cranberries and mint" loading="lazy"><figcaption>Holiday cupcakes</figcaption></figure>
+        <figure><img src="img/cookies-1.jpg" alt="Decorated sugar cookies" loading="lazy"><figcaption>Sugar cookies</figcaption></figure>
+        <figure class="tall"><img src="img/cakepops-1.jpg" alt="Cake pops with sprinkles" loading="lazy"><figcaption>Cake pops</figcaption></figure>
+        <figure><img src="img/tiered-3.jpg" alt="Two-tier cake with floral details" loading="lazy"><figcaption>Tiered cake</figcaption></figure>
+        <figure><img src="img/cake-rustic-2.jpg" alt="Rustic buttercream cake" loading="lazy"><figcaption>Cake</figcaption></figure>
+        <figure class="wide"><img src="img/banner-donut-wall.jpg" alt="Donut wall and dessert display" loading="lazy"><figcaption>Dessert table</figcaption></figure>
+        <figure><img src="img/cookies-2.jpg" alt="Iced sugar cookies" loading="lazy"><figcaption>Sugar cookies</figcaption></figure>
+        <figure><img src="img/cake-naked-berries.jpg" alt="Semi-naked layer cake topped with fresh berries" loading="lazy"><figcaption>Cake</figcaption></figure>
+        <figure><img src="img/cakepops-2.jpg" alt="Chocolate-dipped cake pops" loading="lazy"><figcaption>Cake pops</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about-text">
+        <span class="eyebrow">About</span>
+        <h2>Baked from scratch in Murrieta since 2008</h2>
+        <p>Sweet D'oh Bakery was founded in the summer of 2008 by Executive Chef Evelyn Sanchez. Everything is baked from scratch with natural ingredients, in classic and original flavors, and finished with an artistic flair in both taste and design. Our cakes have been part of hundreds of birthdays, weddings, showers and company parties across Southern California.</p>
+        <h3>Meet the chef</h3>
+        <p>Evelyn has always found baking therapeutic. She enrolled at Le Cordon Bleu in 2004 and graduated with a degree in Culinary Arts in 2006, then worked across the restaurant and events world, including the Academy Awards, food and wine festivals and VIP Hollywood events. In 2008 she decided it was time to make something she could call her own, and Sweet D'oh Bakery was born.</p>
+        <p>She loves being part of someone's special day and bringing the extra touch that makes a celebration that much sweeter.</p>
+      </div>
+      <div class="about-photo">
+        <img src="img/cupcakes-2.jpg" alt="Cupcakes with piped frosting styled on a dessert table" loading="lazy" width="1080" height="1080">
+        <div class="since"><b>18</b><span>years of<br>celebrations</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-bg" id="faq">
+    <div class="wrap faq-grid">
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">How ordering works</span>
+          <h2>Three steps to your dessert</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><i></i><div><h3>Send a quote request</h3><p>Tell us the date, location, guest count and what you have in mind. Photos and color swatches help.</p></div></div>
+          <div class="step"><i></i><div><h3>We design it together</h3><p>You'll get a quote and a sketch or description of the design. We adjust until it's right.</p></div></div>
+          <div class="step"><i></i><div><h3>Deposit, then delivery day</h3><p>A deposit holds your date. We deliver and set up, or you pick up in Murrieta.</p></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">Questions</span>
+          <h2>Good to know</h2>
+        </div>
+        <details open><summary>How far in advance should I order?</summary><p>Custom cakes and dessert tables book up fast, especially May through October and around the holidays. We recommend <span class="fill">2 to 3 weeks</span> for most orders and <span class="fill">6 to 8 weeks</span> for wedding and tiered cakes. Ask about shorter notice; we'll fit you in when we can.</p></details>
+        <details><summary>Do you deliver? How far?</summary><p>Yes. We deliver and set up across the greater Los Angeles, Orange County and Inland Empire areas. Delivery is priced by distance from Murrieta; pick-up is always free.</p></details>
+        <details><summary>Can you work around allergies and diets?</summary><p>Most of the menu can be made vegan, gluten-free, dairy-free, nut-free or lower in sugar. Tell us in your quote request. Our kitchen does handle wheat, dairy, eggs and nuts, so we can't guarantee zero cross-contact for severe allergies.</p></details>
+        <details><summary>Is a deposit required?</summary><p>A <span class="fill">50%</span> deposit confirms your date, with the balance due <span class="fill">one week</span> before your event. Deposits are non-refundable inside <span class="fill">14 days</span> of the event.</p></details>
+        <details><summary>Do you offer tastings?</summary><p>Tasting boxes are available for wedding and large tiered-cake orders. Ask when you request your quote.</p></details>
+        <details><summary>Can you match a photo or theme?</summary><p>Absolutely. Send inspiration photos, invitations or color swatches with your request and we'll design something original to match.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quote">
+    <div class="wrap quote">
+      <div class="quote-side">
+        <span class="eyebrow">Request a quote</span>
+        <h2>No order is too big or too small</h2>
+        <p>Fill in the form and we'll reply with a quote, usually within one business day. Prefer to talk? Call or text us.</p>
+        <div class="contact-line"><b>Call or text</b><span>(951) 477-0705</span></div>
+        <div class="contact-line"><b>Based in</b><span>Murrieta, California</span></div>
+        <div class="contact-line"><b>Follow</b><span style="font-size:18px"><a href="https://www.instagram.com/sweetdohbakery/">Instagram</a> &middot; <a href="https://www.facebook.com/sweetdohbakery/">Facebook</a> &middot; <a href="https://www.yelp.com/biz/sweet-d-oh-bakery-menifee-2">Yelp</a></span></div>
+      </div>
+
+      <form id="quoteForm" novalidate>
+        <div class="row">
+          <div class="field"><label for="qName">Your name</label><input id="qName" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="qPhone">Phone</label><input id="qPhone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="qEmail">Email</label><input id="qEmail" name="email" type="email" autocomplete="email" required></div>
+        <div class="row">
+          <div class="field"><label for="qDate">Event date</label><input id="qDate" name="date" type="date" required></div>
+          <div class="field"><label for="qType">Event type</label>
+            <select id="qType" name="type"><option>Birthday</option><option>Wedding</option><option>Baby or bridal shower</option><option>Quincea&ntilde;era</option><option>Corporate event</option><option>Holiday party</option><option>Other</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="qGuests">Approximate guests</label><input id="qGuests" name="guests" type="number" min="1" inputmode="numeric" placeholder="e.g. 40"></div>
+          <div class="field"><label for="qFulfil">Pickup or delivery</label>
+            <select id="qFulfil" name="fulfil"><option>Pickup in Murrieta</option><option>Delivery</option><option>Not sure yet</option></select></div>
+        </div>
+        <div class="field" id="cityField"><label for="qCity">Delivery city</label><input id="qCity" name="city" placeholder="City or venue"></div>
+        <div class="field">
+          <label>I'm interested in</label>
+          <div class="checks">
+            <label><input type="checkbox" name="items" value="Cake" id="ckCake">Cake</label>
+            <label><input type="checkbox" name="items" value="Tiered cake" id="ckTier">Tiered cake</label>
+            <label><input type="checkbox" name="items" value="Cupcakes" id="ckCup">Cupcakes</label>
+            <label><input type="checkbox" name="items" value="Cake pops" id="ckPop">Cake pops</label>
+            <label><input type="checkbox" name="items" value="Sugar cookies" id="ckCookie">Sugar cookies</label>
+            <label><input type="checkbox" name="items" value="Dessert table" id="ckTable">Dessert table</label>
+            <label><input type="checkbox" name="items" value="Sweet package" id="ckPkg">Sweet package</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Dietary needs</label>
+          <div class="checks">
+            <label><input type="checkbox" name="diet" value="Vegan" id="dVegan">Vegan</label>
+            <label><input type="checkbox" name="diet" value="Gluten-free" id="dGF">Gluten-free</label>
+            <label><input type="checkbox" name="diet" value="Dairy-free" id="dDF">Dairy-free</label>
+            <label><input type="checkbox" name="diet" value="Nut-free" id="dNF">Nut-free</label>
+          </div>
+        </div>
+        <div class="field"><label for="qNotes">Tell us about your event</label><textarea id="qNotes" name="notes" placeholder="Theme, colors, flavors you love, inspiration links, anything else"></textarea></div>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit">Send quote request</button>
+          <small>We reply by email or text. Your details are only used to prepare your quote.</small>
+        </div>
+        <div class="result" id="result" hidden>
+          <h3>Thanks! Here's what we received.</h3>
+          <pre id="resultText"></pre>
+          <div class="actions">
+            <button class="btn btn-ink" type="button" id="copyBtn">Copy request</button>
+            <small>On the live site this goes straight to Evelyn's inbox. In this preview, copy it and text it to (951) 477-0705.</small>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top">Sweet <em>D'oh</em> Bakery</a>
+      <p>Classic desserts with a modern twist. Baked from scratch in Murrieta, California, and delivered across Southern California since 2008.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">About Evelyn</a></li><li><a href="#faq">Ordering &amp; FAQ</a></li><li><a href="#quote">Request a quote</a></li></ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul><li>(951) 477-0705</li><li>Murrieta, CA</li><li><a href="https://www.instagram.com/sweetdohbakery/">Instagram</a></li><li><a href="https://www.facebook.com/sweetdohbakery/">Facebook</a></li><li><a href="https://www.yelp.com/biz/sweet-d-oh-bakery-menifee-2">Yelp</a></li></ul>
+    </div>
+  </div>
+  <div class="copy"><div class="wrap"><span>&copy; 2026 Sweet D'oh Bakery. All rights reserved.</span><span>Vegan &middot; Gluten-free &middot; Nut-free options available</span></div></div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle'),nav=document.getElementById('nav');
+  toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}});
+
+  var fulfil=document.getElementById('qFulfil'),cityField=document.getElementById('cityField');
+  function syncCity(){cityField.hidden=fulfil.value==='Pickup in Murrieta'}
+  fulfil.addEventListener('change',syncCity);syncCity();
+
+  var form=document.getElementById('quoteForm'),result=document.getElementById('result'),out=document.getElementById('resultText');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var req=['qName','qEmail','qDate'],ok=true;
+    req.forEach(function(id){var el=document.getElementById(id);var bad=!el.value.trim()||(el.type==='email'&&el.value.indexOf('@')<0);el.style.borderColor=bad?'#C0392B':'';if(bad&&ok){el.focus();ok=false}});
+    if(!ok)return;
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var checked=function(n){return Array.prototype.map.call(form.querySelectorAll('input[name="'+n+'"]:checked'),function(c){return c.value}).join(', ')||'—'};
+    var lines=['Quote request — Sweet D\'oh Bakery','Name: '+v('qName'),'Email: '+v('qEmail'),'Phone: '+(v('qPhone')||'—'),'Event date: '+v('qDate'),'Event type: '+v('qType'),'Guests: '+(v('qGuests')||'—'),'Pickup/delivery: '+v('qFulfil')+(cityField.hidden?'':' — '+(v('qCity')||'city not given')),'Interested in: '+checked('items'),'Dietary: '+checked('diet'),'Notes: '+(v('qNotes')||'—')];
+    out.textContent=lines.join('\n');result.hidden=false;result.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var btn=this,txt=out.textContent;
+    function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy request'},1600)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected — press copy'}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,fallback)}else{fallback()}
+  });
+})();
+</script>
+</body>
+</html>
